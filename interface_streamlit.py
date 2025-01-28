@@ -24,7 +24,7 @@ def generate_resolution(first_party_prompt, second_party_prompt):
     llm = ChatMistralAI(
         model="mistral-large-latest",
         max_retries=2,
-        api_key=mistral_api_key or st.secrets["MISTRAL_API_KEY"],
+        api_key=mistral_api_key,
     )
 
     prompt_template = PromptTemplate(
